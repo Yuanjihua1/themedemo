@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KlG-10-CLG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--白天-->
+        <scene sceneID="QtV-p5-X91">
+            <objects>
+                <navigationController id="Rum-uU-3M3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="白天" id="Srv-r9-Qlz"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eCH-PU-7wc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e2w-YL-oqH" kind="relationship" relationship="rootViewController" id="csY-nB-22e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnK-AN-KVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="22"/>
+        </scene>
+        <!--白天-->
+        <scene sceneID="NgN-6T-Q50">
+            <objects>
+                <viewController id="e2w-YL-oqH" customClass="ViewController" customModule="themedemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fs4-yq-aeR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qaf-lZ-Gxc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oup-r6-jMS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qAJ-C5-3vE">
+                                <rect key="frame" x="40" y="158" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="白天" id="s1a-f1-CPK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="themeTitle" destination="s1a-f1-CPK" id="pIf-Vo-Ivm"/>
+                        <outlet property="themeView" destination="qAJ-C5-3vE" id="vYL-HZ-w7t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15u-4v-RWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="22"/>
+        </scene>
+        <!--设置-->
+        <scene sceneID="cJ8-dC-Elz">
+            <objects>
+                <navigationController id="uk3-DQ-3RH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="设置" id="RlU-DP-uz2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DKl-Sp-CtX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6oh-HS-tn4" kind="relationship" relationship="rootViewController" id="CR4-D8-ceo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rzj-4a-je8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="647"/>
+        </scene>
+        <!--设置主题-->
+        <scene sceneID="lxY-0f-kTx">
+            <objects>
+                <viewController id="6oh-HS-tn4" customClass="SetViewController" customModule="themedemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pci-wL-XRE"/>
+                        <viewControllerLayoutGuide type="bottom" id="dQk-Uz-XGI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UWl-9D-6uS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eKg-44-Hw5">
+                                <rect key="frame" x="136" y="163" width="51" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="6oh-HS-tn4" eventType="valueChanged" id="rjo-95-4Tm"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="夜晚模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qv-1X-RjV">
+                                <rect key="frame" x="39" y="163" width="71" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="白天模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Y-3S-FuO">
+                                <rect key="frame" x="213" y="163" width="71" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="设置主题" id="pqa-GE-dvd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="day" destination="l9Y-3S-FuO" id="Ix6-ds-j7V"/>
+                        <outlet property="night" destination="4Qv-1X-RjV" id="zIG-YS-tgv"/>
+                        <outlet property="sender" destination="eKg-44-Hw5" id="J5g-jP-6ZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmk-JW-pSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="647"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qWj-Mm-k5w">
+            <objects>
+                <tabBarController id="KlG-10-CLG" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="o8d-3V-esD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Rum-uU-3M3" kind="relationship" relationship="viewControllers" id="MP0-Xo-tTq"/>
+                        <segue destination="uk3-DQ-3RH" kind="relationship" relationship="viewControllers" id="cl4-34-cJ5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NfL-zd-6vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="223"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image.jpg" width="400" height="354"/>
+    </resources>
+</document>
